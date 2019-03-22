@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                make '-f Makefile all -j8'
+                sh 'make -f Makefile all -j8'
             }
         }
     }
