@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('CleanWS') {
+            steps {
+                echo 'Cleaning up /tmp/testroot'
+                sh 'rm -Rf /tmp/testroot'
+            }
         stage('Configure') {
             steps {
                 echo 'Running build automation'
