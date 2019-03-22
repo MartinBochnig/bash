@@ -12,5 +12,10 @@ pipeline {
                 sh 'make -f Makefile all -j8'
             }
         }
+        stage('Install') {
+            steps {
+                sh 'make -f Makefile install'
+            }
+        }
     }
 } 
