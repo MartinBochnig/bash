@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'make -f Makefile all -j8'
+                sh 'make -f Makefile all -j10'
             }
         }
         stage('Install') {
